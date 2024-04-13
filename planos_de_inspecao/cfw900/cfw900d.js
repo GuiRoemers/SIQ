@@ -179,7 +179,7 @@ function inspecaoCFW900D9() {
 }
 
 function inspecaoCFW900D10() {
-    exibirTextoNaTela('h3','Verificar polaridade da bateria.');
+    exibirTextoNaTela('h3','Verificar conexão do cabo XC1 (ao lado da cadeirinha).');
     adicionarImagem(img10);
 
     botaoOK.addEventListener('click', function() {
@@ -192,7 +192,7 @@ function inspecaoCFW900D10() {
 }
 
 function inspecaoCFW900D11() {
-    exibirTextoNaTela('h3','Verificar proteção do Led.');
+    exibirTextoNaTela('h3','Verificar polaridade da bateria.');
     adicionarImagem(img11);
 
     botaoOK.addEventListener('click', function() {
@@ -205,7 +205,7 @@ function inspecaoCFW900D11() {
 }
 
 function inspecaoCFW900D12() {
-    exibirTextoNaTela('h3','Verificar proteção DC-.');
+    exibirTextoNaTela('h3','Verificar proteção do Led.');
     adicionarImagem(img12);
 
     botaoOK.addEventListener('click', function() {
@@ -218,6 +218,19 @@ function inspecaoCFW900D12() {
 }
 
 function inspecaoCFW900D13() {
+    exibirTextoNaTela('h3','Verificar proteção DC-.');
+    adicionarImagem(img13);
+
+    botaoOK.addEventListener('click', function() {
+        inspecaoCFW900D14();
+    });
+
+    botaoNOK.addEventListener('click', function() {
+        inspecaoCFW900D14();
+    });
+}
+
+function inspecaoCFW900D14() {
     exibirTextoNaTela('h3','Inspeção finalizada.');
     adicionarImagem('');
     exibirTextoNaTela('p', 'O produto está Aprovado/Reprovado.')
