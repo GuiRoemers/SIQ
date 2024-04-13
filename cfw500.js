@@ -58,8 +58,9 @@ function limparTela() {
 
     // Verifica se o elemento foi encontrado
     if (botaoVoltar) {
-        // Remove o elemento
-        botaoVoltar.parentNode.removeChild(botaoVoltar);
+        // Remove o elemento (trocar block por none)
+        var botaoVoltar = document.getElementById('voltar');
+        botaoVoltar.style.display = 'block';
     }
 }
 

@@ -89,7 +89,7 @@ function inspecaoCFW900D2() {
 }
 
 function inspecaoCFW900D3() {
-    exibirTextoNaTela('h3','Verificar cabos do ventilador XC98A e XC98B (comparar etiqueta com serigrafia).');
+    exibirTextoNaTela('h3','Verificar cabos do ventilador XC98A e XC98B.');
     adicionarImagem(img3);
 
     botaoOK.addEventListener('click', function() {
@@ -141,7 +141,7 @@ function inspecaoCFW900D6() {
 }
 
 function inspecaoCFW900D7() {
-    exibirTextoNaTela('h3','Verificar cores dos cabos dos indutores com seus respectivos barramentos (azul, branco, preto e amarelo).');
+    exibirTextoNaTela('h3','Verificar cabos dos indutores com os barramentos (azul, branco, preto e amarelo).');
     adicionarImagem(img7);
 
     botaoOK.addEventListener('click', function() {
@@ -167,7 +167,7 @@ function inspecaoCFW900D8() {
 }
 
 function inspecaoCFW900D9() {
-    exibirTextoNaTela('h3','Verificar encaixe da cadeirinha (conexão do cartão SMM90 no P90).');
+    exibirTextoNaTela('h3','Verificar encaixe da cadeirinha.');
     adicionarImagem(img9);
 
     botaoOK.addEventListener('click', function() {
