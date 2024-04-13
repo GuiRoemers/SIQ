@@ -81,7 +81,8 @@ function limparTela() {
     // Verifica se o elemento foi encontrado
     if (botaoVoltar) {
         // Remove o elemento
-        botaoVoltar.parentNode.removeChild(botaoVoltar);
+        var botaoVoltar = document.getElementById('voltar');
+        botaoVoltar.style.display = 'none';
     }
 
     tornarBotoesVisiveis();
@@ -132,7 +133,24 @@ function clickCFW900D() {
 
         console.log("Inspeção do CFW900D iniciada.");
 
-        inspecaoCFW900D();
+        function carregarImagens() {
+            let img1 = 'planos_de_inspecao/cfw900/cfw900d/1.jpeg'
+            let img2 = 'planos_de_inspecao/cfw900/cfw900d/2.jpeg'
+            let img3 = 'planos_de_inspecao/cfw900/cfw900d/3.jpeg'
+            let img4 = 'planos_de_inspecao/cfw900/cfw900d/4.jpeg'
+            let img5 = 'planos_de_inspecao/cfw900/cfw900d/5.jpeg'
+            let img6 = 'planos_de_inspecao/cfw900/cfw900d/6.jpeg'
+            let img7 = 'planos_de_inspecao/cfw900/cfw900d/7.jpeg'
+            let img8 = 'planos_de_inspecao/cfw900/cfw900d/8.jpeg'
+            let img9 = 'planos_de_inspecao/cfw900/cfw900d/9.jpeg'
+            let img10 = 'planos_de_inspecao/cfw900/cfw900d/10.jpeg'
+            let img11 = 'planos_de_inspecao/cfw900/cfw900d/11.jpeg'
+            let img12 = 'planos_de_inspecao/cfw900/cfw900d/12.jpeg'
+        }
+
+        carregarImagens();        
+
+        inspecaoCFW900D1();
         
     });
 

@@ -241,3 +241,14 @@ h3 {
 .red-button:hover {
     background-color: #5f0b0b;
 }
+
+/* Estilo para o contêiner da imagem */
+#imagemContainer {
+    max-width: 100%; /* Defina a largura máxima do contêiner como 100% da tela */
+}
+
+/* Estilo para a imagem dentro do contêiner */
+.imagem-redimensionada {
+    width: 100%; /* A imagem ocupará 100% da largura do contêiner */
+    height: auto; /* Isso garantirá que a altura seja ajustada proporcionalmente */
+}
