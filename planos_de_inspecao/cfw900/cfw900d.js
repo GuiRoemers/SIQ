@@ -1,21 +1,3 @@
-//Carregar imagens
-let img1 = 'planos_de_inspecao/cfw900/cfw900d/1.jpeg';
-let img2 = 'planos_de_inspecao/cfw900/cfw900d/2.jpeg';
-let img3 = 'planos_de_inspecao/cfw900/cfw900d/3.jpeg';
-let img4 = 'planos_de_inspecao/cfw900/cfw900d/4.jpeg';
-let img5 = 'planos_de_inspecao/cfw900/cfw900d/5.jpeg';
-let img6 = 'planos_de_inspecao/cfw900/cfw900d/6.jpeg';
-let img7 = 'planos_de_inspecao/cfw900/cfw900d/7.jpeg';
-let img8 = 'planos_de_inspecao/cfw900/cfw900d/8.jpeg';
-let img9 = 'planos_de_inspecao/cfw900/cfw900d/9.jpeg';
-let img10 = 'planos_de_inspecao/cfw900/cfw900d/10.jpeg';
-let img11 = 'planos_de_inspecao/cfw900/cfw900d/11.jpeg';
-let img12 = 'planos_de_inspecao/cfw900/cfw900d/12.jpeg';
-let img13 = 'planos_de_inspecao/cfw900/cfw900d/13.jpeg';
-
-const botaoOK = document.getElementById('OK');
-const botaoNOK = document.getElementById('NOK');
-
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
@@ -37,24 +19,6 @@ function adicionarImagem(caminhoDaImagem) {
     imagemContainer.appendChild(novaImagem);
 }
 
-function tornarBotoesVisiveis() {
-    var botaoOK = document.getElementById('OK');
-    var botaoNOK = document.getElementById('NOK');
-
-    // Tornando os botões visíveis
-    botaoOK.style.display = 'block';
-    botaoNOK.style.display = 'block';
-}
-
-function tornarBotoesInvisiveis() {
-    var botaoOK = document.getElementById('OK');
-    var botaoNOK = document.getElementById('NOK');
-
-    // Tornando os botões invisíveis
-    botaoOK.style.display = 'none';
-    botaoNOK.style.display = 'none';
-}
-
 function tornarBotaoVoltarVisivel() {
     var botaoVoltar = document.getElementById('voltar');
 
@@ -64,169 +28,338 @@ function tornarBotaoVoltarVisivel() {
 
 function inspecaoCFW900D1 () {
     exibirTextoNaTela('h3','Verificar cabos RST.');
+    let img1 = 'planos_de_inspecao/cfw900/cfw900d/1.jpeg';
     adicionarImagem(img1);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK1">OK</button>
+        <button class="red-button" id="NOK1">Não OK</button>
+    `;
+    var botaoOK1 = document.getElementById('OK1');
+    var botaoNOK1 = document.getElementById('NOK1');
+
+    botaoOK1.addEventListener('click', function() {
+        let resposta1 = 'OK';
+        console.log(`Verificar cabos RST: ${resposta1}`);
         inspecaoCFW900D2();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK1.addEventListener('click', function() {
+        let resposta1 = 'NOK';
+        console.log(`Verificar cabos RST: ${resposta1}`);
         inspecaoCFW900D2();
     });
 }
 
 function inspecaoCFW900D2() {
     exibirTextoNaTela('h3','Verificar integridade dos cabos do indutor.');
+    let img2 = 'planos_de_inspecao/cfw900/cfw900d/2.jpeg';
     adicionarImagem(img2);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK2">OK</button>
+        <button class="red-button" id="NOK2">Não OK</button>
+    `;
+    var botaoOK2 = document.getElementById('OK2');
+    var botaoNOK2 = document.getElementById('NOK2');
+
+    botaoOK2.addEventListener('click', function() {
+        let resposta2 = 'OK';
+        console.log(`Verificar integridade dos cabos do indutor: ${resposta2}`);
         inspecaoCFW900D3();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK2.addEventListener('click', function() {
+        let resposta2 = 'NOK';
+        console.log(`Verificar integridade dos cabos do indutor: ${resposta2}`);
         inspecaoCFW900D3();
     });
 }
 
 function inspecaoCFW900D3() {
     exibirTextoNaTela('h3','Verificar cabos do ventilador XC98A e XC98B.');
+    let img3 = 'planos_de_inspecao/cfw900/cfw900d/3.jpeg';
     adicionarImagem(img3);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK3">OK</button>
+        <button class="red-button" id="NOK3">Não OK</button>
+    `;
+    var botaoOK3 = document.getElementById('OK3');
+    var botaoNOK3 = document.getElementById('NOK3');
+
+    botaoOK3.addEventListener('click', function() {
+        let resposta3 = 'OK';
+        console.log(`Verificar cabos do ventilador XC98A e XC98B: ${resposta3}`);
         inspecaoCFW900D4();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK3.addEventListener('click', function() {
+        let resposta3 = 'NOK';
+        console.log(`Verificar cabos do ventilador XC98A e XC98B: ${resposta3}`);
         inspecaoCFW900D4();
     });
 }
 
 function inspecaoCFW900D4() {
     exibirTextoNaTela('h3','Verificar conexão dos 19 cabos.');
+    let img4 = 'planos_de_inspecao/cfw900/cfw900d/4.jpeg';
     adicionarImagem(img4);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK4">OK</button>
+        <button class="red-button" id="NOK4">Não OK</button>
+    `;
+    var botaoOK4 = document.getElementById('OK4');
+    var botaoNOK4 = document.getElementById('NOK4');
+
+    botaoOK4.addEventListener('click', function() {
+        let resposta4 = 'OK';
+        console.log(`Verificar conexão dos 19 cabos: ${resposta4}`);
         inspecaoCFW900D5();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK4.addEventListener('click', function() {
+        let resposta4 = 'NOK';
+        console.log(`Verificar conexão dos 19 cabos: ${resposta4}`);
         inspecaoCFW900D5();
     });
 }
 
 function inspecaoCFW900D5() {
     exibirTextoNaTela('h3','Verificar aperto dos parafusos do módulo.');
+    let img5 = 'planos_de_inspecao/cfw900/cfw900d/5.jpeg';
     adicionarImagem(img5);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK5">OK</button>
+        <button class="red-button" id="NOK5">Não OK</button>
+    `;
+    var botaoOK5 = document.getElementById('OK5');
+    var botaoNOK5 = document.getElementById('NOK5');
+
+    botaoOK5.addEventListener('click', function() {
+        let resposta5 = 'OK';
+        console.log(`Verificar aperto dos parafusos do módulo: ${resposta5}`);
         inspecaoCFW900D6();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK5.addEventListener('click', function() {
+        let resposta5 = 'NOK';
+        console.log(`Verificar aperto dos parafusos do módulo: ${resposta5}`);
         inspecaoCFW900D6();
     });
 }
 
 function inspecaoCFW900D6() {
     exibirTextoNaTela('h3','Verificar aperto dos parafusos dos barramentos.');
+    let img6 = 'planos_de_inspecao/cfw900/cfw900d/6.jpeg';
     adicionarImagem(img6);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK6">OK</button>
+        <button class="red-button" id="NOK6">Não OK</button>
+    `;
+    var botaoOK6 = document.getElementById('OK6');
+    var botaoNOK6 = document.getElementById('NOK6');
+
+    botaoOK6.addEventListener('click', function() {
+        let resposta6 = 'OK';
+        console.log(`Verificar aperto dos parafusos dos barramentos: ${resposta6}`);
         inspecaoCFW900D7();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK6.addEventListener('click', function() {
+        let resposta6 = 'NOK';
+        console.log(`Verificar aperto dos parafusos dos barramentos: ${resposta6}`);
         inspecaoCFW900D7();
     });
 }
 
 function inspecaoCFW900D7() {
     exibirTextoNaTela('h3','Verificar cabos dos indutores com os barramentos (azul, branco, preto e amarelo).');
+    let img7 = 'planos_de_inspecao/cfw900/cfw900d/7.jpeg';
     adicionarImagem(img7);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK7">OK</button>
+        <button class="red-button" id="NOK7">Não OK</button>
+    `;
+    var botaoOK7 = document.getElementById('OK7');
+    var botaoNOK7 = document.getElementById('NOK7');
+
+    botaoOK7.addEventListener('click', function() {
+        let resposta7 = 'OK';
+        console.log(`Verificar cabos dos indutores com os barramentos (azul, branco, preto e amarelo): ${resposta7}`);
         inspecaoCFW900D8();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK7.addEventListener('click', function() {
+        let resposta7 = 'NOK';
+        console.log(`Verificar cabos dos indutores com os barramentos (azul, branco, preto e amarelo): ${resposta7}`);
         inspecaoCFW900D8();
     });
 }
 
 function inspecaoCFW900D8() {
     exibirTextoNaTela('h3','Verificar espaçador ao lado do módulo IGBT.');
+    let img8 = 'planos_de_inspecao/cfw900/cfw900d/8.jpeg';
     adicionarImagem(img8);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK8">OK</button>
+        <button class="red-button" id="NOK8">Não OK</button>
+    `;
+    var botaoOK8 = document.getElementById('OK8');
+    var botaoNOK8 = document.getElementById('NOK8');
+
+    botaoOK8.addEventListener('click', function() {
+        let resposta8 = 'OK';
+        console.log(`Verificar espaçador ao lado do módulo IGBT: ${resposta8}`);
         inspecaoCFW900D9();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK8.addEventListener('click', function() {
+        let resposta8 = 'NOK';
+        console.log(`Verificar espaçador ao lado do módulo IGBT: ${resposta8}`);
         inspecaoCFW900D9();
     });
 }
 
 function inspecaoCFW900D9() {
     exibirTextoNaTela('h3','Verificar encaixe da cadeirinha.');
+    let img9 = 'planos_de_inspecao/cfw900/cfw900d/9.jpeg';
     adicionarImagem(img9);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK9">OK</button>
+        <button class="red-button" id="NOK9">Não OK</button>
+    `;
+    var botaoOK9 = document.getElementById('OK9');
+    var botaoNOK9 = document.getElementById('NOK9');
+
+    botaoOK9.addEventListener('click', function() {
+        let resposta9 = 'OK';
+        console.log(`Verificar encaixe da cadeirinha: ${resposta9}`);
         inspecaoCFW900D10();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK9.addEventListener('click', function() {
+        let resposta9 = 'NOK';
+        console.log(`Verificar encaixe da cadeirinha: ${resposta9}`);
         inspecaoCFW900D10();
     });
 }
 
 function inspecaoCFW900D10() {
     exibirTextoNaTela('h3','Verificar conexão do cabo XC1 (ao lado da cadeirinha).');
+    let img10 = 'planos_de_inspecao/cfw900/cfw900d/10.jpeg';
     adicionarImagem(img10);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK10">OK</button>
+        <button class="red-button" id="NOK10">Não OK</button>
+    `;
+    var botaoOK10 = document.getElementById('OK10');
+    var botaoNOK10 = document.getElementById('NOK10');
+
+    botaoOK10.addEventListener('click', function() {
+        let resposta10 = 'OK';
+        console.log(`Verificar conexão do cabo XC1 (ao lado da cadeirinha): ${resposta10}`);
         inspecaoCFW900D11();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK10.addEventListener('click', function() {
+        let resposta10 = 'NOK';
+        console.log(`Verificar conexão do cabo XC1 (ao lado da cadeirinha): ${resposta10}`);
         inspecaoCFW900D11();
     });
 }
 
 function inspecaoCFW900D11() {
     exibirTextoNaTela('h3','Verificar polaridade da bateria.');
+    let img11 = 'planos_de_inspecao/cfw900/cfw900d/11.jpeg';
     adicionarImagem(img11);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK11">OK</button>
+        <button class="red-button" id="NOK11">Não OK</button>
+    `;
+    var botaoOK11 = document.getElementById('OK11');
+    var botaoNOK11 = document.getElementById('NOK11');
+
+    botaoOK11.addEventListener('click', function() {
+        let resposta11 = 'OK';
+        console.log(`Verificar polaridade da bateria: ${resposta11}`);
         inspecaoCFW900D12();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK11.addEventListener('click', function() {
+        let resposta11 = 'NOK';
+        console.log(`Verificar polaridade da bateria: ${resposta11}`);
         inspecaoCFW900D12();
     });
 }
 
 function inspecaoCFW900D12() {
     exibirTextoNaTela('h3','Verificar proteção do Led.');
+    let img12 = 'planos_de_inspecao/cfw900/cfw900d/12.jpeg';
     adicionarImagem(img12);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK12">OK</button>
+        <button class="red-button" id="NOK12">Não OK</button>
+    `;
+    var botaoOK12 = document.getElementById('OK12');
+    var botaoNOK12 = document.getElementById('NOK12');
+
+    botaoOK12.addEventListener('click', function() {
+        let resposta12 = 'OK';
+        console.log(`Verificar proteção do Led: ${resposta12}`);
         inspecaoCFW900D13();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK12.addEventListener('click', function() {
+        let resposta12 = 'NOK';
+        console.log(`Verificar proteção do Led: ${resposta12}`);
         inspecaoCFW900D13();
     });
 }
 
 function inspecaoCFW900D13() {
-    exibirTextoNaTela('h3','Verificar proteção DC-.');
+    exibirTextoNaTela('h3','Verificar proteção DC.');
+    let img13 = 'planos_de_inspecao/cfw900/cfw900d/13.jpeg';
     adicionarImagem(img13);
 
-    botaoOK.addEventListener('click', function() {
+    var buttonContainer = document.querySelector('.button-container-ok-nok ');
+    buttonContainer.innerHTML = `
+        <button class="green-button" id="OK13">OK</button>
+        <button class="red-button" id="NOK13">Não OK</button>
+    `;
+    var botaoOK13 = document.getElementById('OK13');
+    var botaoNOK13 = document.getElementById('NOK13');
+
+    botaoOK13.addEventListener('click', function() {
+        let resposta13 = 'OK';
+        console.log(`Verificar proteção DC: ${resposta13}`);
         inspecaoCFW900D14();
     });
 
-    botaoNOK.addEventListener('click', function() {
+    botaoNOK13.addEventListener('click', function() {
+        let resposta13 = 'NOK';
+        console.log(`Verificar proteção DC: ${resposta13}`);
         inspecaoCFW900D14();
     });
 }
@@ -234,7 +367,33 @@ function inspecaoCFW900D13() {
 function inspecaoCFW900D14() {
     exibirTextoNaTela('h3','Inspeção finalizada.');
     adicionarImagem('');
-    exibirTextoNaTela('p', 'O produto está Aprovado/Reprovado.')
-    tornarBotoesInvisiveis();
+    exibirTextoNaTela('p', 'O produto está Aprovado/Reprovado.');
+
+    // if (
+    //     resposta1 == "NOK" || 
+    //     resposta2 == "NOK" || 
+    //     resposta3 == "NOK" || 
+    //     resposta4 == "NOK" || 
+    //     resposta5 == "NOK" || 
+    //     resposta6 == "NOK" || 
+    //     resposta7 == "NOK" || 
+    //     resposta8 == "NOK" ||
+    //     resposta9 == "NOK" || 
+    //     resposta10 == "NOK" || 
+    //     resposta11 == "NOK" || 
+    //     resposta12 == "NOK" || 
+    //     resposta13 == "NOK"
+    // ) {
+    //     let situacao = "Peça Reprovada.";
+    //     console.log(situacao);
+    // } else {
+    //     let situacao = "Peça Aprovada.";
+    //     console.log(situacao);
+    // };
+
+    // Remover os botões 'OK' e 'Não OK'
+    var buttonContainer = document.querySelector('.button-container-ok-nok');
+    buttonContainer.innerHTML = '';
+
     tornarBotaoVoltarVisivel();
 }

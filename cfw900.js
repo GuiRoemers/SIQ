@@ -85,8 +85,6 @@ function limparTela() {
         botaoVoltar.style.display = 'none';
     }
 
-    tornarBotoesVisiveis();
-
     exibirTextoNaTela('h1','');
 
     exibirTextoNaTela('h2','');
