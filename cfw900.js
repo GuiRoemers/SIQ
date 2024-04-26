@@ -27,6 +27,7 @@ function numeroDeSerie() {
 
     // Cria um novo elemento para o campo de entrada do usuário
     var inputElement = document.createElement('input');
+    inputElement.id = 'numeroDeSerieInput'; // Adiciona um id ao campo de entrada
     inputElement.type = 'number';
     inputElement.min = '999999999';
     inputElement.max = '2000000000';
@@ -91,6 +92,8 @@ function limparTela() {
 
 }
 
+var serial;
+
 function clickCFW900D() {
     console.log('Botão CFW900 D clicado. Executando dentro do arquivo cfw900.js');
 
@@ -118,6 +121,14 @@ function clickCFW900D() {
 
     // Adiciona evento de clique ao botão
     iniciarInspecaoButton.addEventListener('click', function() {
+        // Obter o campo de entrada existente pelo ID
+        serial = document.getElementById('numeroDeSerieInput');
+        
+        // Obter o valor digitado no campo de entrada
+        serial = numeroDeSerieInput.value;
+
+        // Exibir o número de série no console para depuração
+        console.log('Número de série:', serial);
 
         // Modifica o texto do elemento h1 para 'Produto'
         var tituloPrincipal = document.querySelector('h1');
@@ -130,14 +141,12 @@ function clickCFW900D() {
         limparTela();
 
         console.log("Inspeção do CFW900D iniciada.");
-
-        inspecaoCFW900D1();
         
+        inspecaoCFW900D1();
     });
 
     // Adiciona o botão ao contêiner de botões
     buttonContainer.appendChild(iniciarInspecaoButton);
-
 }
 
 function clickCFW900E() {

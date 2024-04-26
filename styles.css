@@ -183,6 +183,18 @@ p {
 }
 
 /*Texto das inspeções*/
+p2 {
+    text-align: center;
+    color: #272727;
+    font-size: 24px; /* Tamanho da fonte desejado */
+    font-weight: bold;
+    margin-top: 0px;
+    z-index: 9999; /* Garante que o texto fique acima de outros elementos */
+    display: block; /* Assegura que o elemento seja tratado como um bloco */
+    margin-bottom: 20px; /* Adiciona 20px de espaçamento abaixo do elemento */
+}
+
+/*Texto das inspeções*/
 h3 {
     text-align: center;
     color: #272727;
@@ -220,7 +232,7 @@ h3 {
 }
 
 .green-button:hover {
-    background-color: #036800;
+    background-color: rgb(3, 85, 1); /* Verde */
 }
 
 .red-button {
@@ -239,13 +251,27 @@ h3 {
 }
 
 .red-button:hover {
-    background-color: #5f0b0b;
+    background-color: #d43b30; /* Vermelho */
 }
 
 /* Estilo para o contêiner da imagem */
 #imagemContainer {
+    position: fixed; /* Define a posição fixa na tela */
+    bottom: 100px; /* Alinha o contêiner no topo da tela */
+    left: 50%; /* Alinha o contêiner à esquerda da tela */
+    transform: translate(-50%);
+    width: 80%; /* Define a largura do contêiner como 80% da largura da tela */
+    height: auto;
     max-width: 100%; /* Defina a largura máxima do contêiner como 100% da tela */
+    z-index: 10; /* Adiciona um z-index alto para que fique acima de outros elementos */
+    padding: 10px; /* Adiciona um pouco de espaçamento interno */
+    background-color: white; /* Define uma cor de fundo para o contêiner */
 }
+
+/* Estilo para o contêiner da imagem */
+/* #imagemContainer {
+    max-width: 100%;
+} */
 
 /* Estilo para a imagem dentro do contêiner */
 .imagem-redimensionada {
